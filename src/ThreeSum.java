@@ -9,8 +9,17 @@ public class ThreeSum {
     // Count triples that sum to 0 (brute force O(n^3))
     public static int count(int[] a) {
 
+
+        int n=a.length;
         int count = 0;
-        //TODO: Finish THreeSum
+        for(int i=0; i<n; i++){
+            for(int k=i+1; k<n;k++){
+                for(int j=k+1; j<n;j++){
+                    if( a[i] + a[j]+a[k]==0)
+                        count++;
+                }
+            }
+        }
 
         return count;
     }
